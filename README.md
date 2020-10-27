@@ -1,6 +1,6 @@
 **Тестовое задание Укрпочта**
 
-Данное задание на позицию Java-программиста.
+Задание на позицию Java-программиста.
 
 *Использовать при решении : Java 8, Hibernate, H2, JPA, Maven.*
 
@@ -64,15 +64,25 @@
 Потом удалить повторяющиеся строки, оставив только по одной уникальной строке (оставить только самые поздние строки). 
 По возможности, **привести несколько вариантов решений.**
 
-| EMPLOYEES |            |           |          | DEPARTMENT  
-|-----------|------------|-----------|          |---------------|-----------------|
-| LAST_NAME | DEPARTMENT | SALARY    |          | DEPARTMENT_ID | DEPARTMENT_NAME |
-| Getz      | 10         | 3000      |          | 10            | Sales           |
-| Davis     | 20         | 1500      |          | 20            | Marketing       |
-| King      | 20         | 2200      |          | 30            | Accounts        |
-| Davis     | 30         | 5000      |          | 40            | Administration  |
-| Kochhar   |            | 5000      |          |               |                 |
+| EMPLOYEES |            |           |
+|-----------|------------|-----------|
+| LAST_NAME | DEPARTMENT | SALARY    |
+| Getz      | 10         | 3000      |
+| Davis     | 20         | 1500      |
+| King      | 20         | 2200      |
+| Davis     | 30         | 5000      |
+| Kochhar   |            | 5000      |
 
+---
+
+| DEPARTMENT    | 
+|---------------|-----------------|
+| DEPARTMENT_ID | DEPARTMENT_NAME |
+| 10            | Sales           |
+| 20            | Marketing       |
+| 30            | Accounts        |
+| 40            | Administration  |
+|               |                 |
 
 **3** -Получить всех сотрудников, независимо от того, имеют ли они соответствия отдела в
 департаменте
@@ -91,18 +101,28 @@ SALARY NUMBER
 
 **5** 
 
-| EMPLOYEES   |          |         |        |          |        |       | DEPARTMENTS    |
-|-------------|----------|---------|--------|----------|--------|       |----------------|------------------|
-| EMPLOYEE_ID | EMP_NAME | DEPT_ID | MGR_ID | JOB_ID   | SALARY |       | DEPARTMENTS_ID | DEPARTMENTS_NAME |
-| 101         | Smith    | 20      | 120    | SA_REP   | 4000   |       | 10             | Admin            |
-| 102         | Martin   | 10      | 105    | CLERK    | 2500   |       | 20             | Education        |
-| 103         | Chris    | 20      | 120    | IT_ADMIN | 4200   |       | 30             | IT               |
-| 104         | John     | 30      | 108    | HR_CLERK | 2500   |       | 40             | Human Resources  |
-| 105         | Diana    | 30      | 108    | IT_ADMIN | 5000   |       |                |                  |
-| 106         | Smith    | 40      | 110    | AD_ASST  | 3000   |       |                |                  |
-| 108         | Jennifer | 30      | 110    | HR_DIR   | 6500   |       |                |                  |
-| 110         | Bob      | 40      |        | EX_DIR   | 8000   |       |                |                  |
-| 120         | Ravi     | 20      | 110    | SA*DIR   | 6500   |       |                |                  |
+| EMPLOYEES   |          |         |        |          |        |
+|-------------|----------|---------|--------|----------|--------|
+| EMPLOYEE_ID | EMP_NAME | DEPT_ID | MGR_ID | JOB_ID   | SALARY |
+| 101         | Smith    | 20      | 120    | SA_REP   | 4000   |
+| 102         | Martin   | 10      | 105    | CLERK    | 2500   |
+| 103         | Chris    | 20      | 120    | IT_ADMIN | 4200   |
+| 104         | John     | 30      | 108    | HR_CLERK | 2500   |
+| 105         | Diana    | 30      | 108    | IT_ADMIN | 5000   |
+| 106         | Smith    | 40      | 110    | AD_ASST  | 3000   |
+| 108         | Jennifer | 30      | 110    | HR_DIR   | 6500   |
+| 110         | Bob      | 40      |        | EX_DIR   | 8000   |
+| 120         | Ravi     | 20      | 110    | SA*DIR   | 6500   | 
+
+---
+
+| DEPARTMENTS    |
+|----------------|------------------|
+| DEPARTMENTS_ID | DEPARTMENTS_NAME |
+| 10             | Admin            |
+| 20             | Education        |
+| 30             | IT               |
+| 40             | Human Resources  |
 
 - В таблице EMPLOYEES, EMPLOYEE_ID является первичным ключом.
 MGR_ID это идентификатор менеджеров и относится к EMPLOYEE_ID.
