@@ -64,7 +64,7 @@
 Потом удалить повторяющиеся строки, оставив только по одной уникальной строке (оставить только самые поздние строки). 
 По возможности, **привести несколько вариантов решений.**
 
-| EMPLOYEES |            |           |
+| EMPLOYEES | 
 |-----------|------------|-----------|
 | LAST_NAME | DEPARTMENT | SALARY    |
 | Getz      | 10         | 3000      |
@@ -73,7 +73,6 @@
 | Davis     | 30         | 5000      |
 | Kochhar   |            | 5000      |
 
----
 
 | DEPARTMENT    | 
 |---------------|-----------------|
@@ -101,9 +100,9 @@ SALARY NUMBER
 
 **5** 
 
-| EMPLOYEES   |          |         |        |          |        |
-|-------------|----------|---------|--------|----------|--------|
+Таблица EMPLOYEES
 | EMPLOYEE_ID | EMP_NAME | DEPT_ID | MGR_ID | JOB_ID   | SALARY |
+|-------------|----------|---------|--------|----------|--------|
 | 101         | Smith    | 20      | 120    | SA_REP   | 4000   |
 | 102         | Martin   | 10      | 105    | CLERK    | 2500   |
 | 103         | Chris    | 20      | 120    | IT_ADMIN | 4200   |
@@ -112,17 +111,15 @@ SALARY NUMBER
 | 106         | Smith    | 40      | 110    | AD_ASST  | 3000   |
 | 108         | Jennifer | 30      | 110    | HR_DIR   | 6500   |
 | 110         | Bob      | 40      |        | EX_DIR   | 8000   |
-| 120         | Ravi     | 20      | 110    | SA*DIR   | 6500   | 
+| 120         | Ravi     | 20      | 110    | SA`*`DIR | 6500   | 
 
----
-
-| DEPARTMENTS    |
-|----------------|------------------|
-| DEPARTMENTS_ID | DEPARTMENTS_NAME |
-| 10             | Admin            |
-| 20             | Education        |
-| 30             | IT               |
-| 40             | Human Resources  |
+Таблица DEPARTMENTS
+| DEPARTMENTS_ID| DEPARTMENTS_NAME   |       |
+| ------------- |:------------------:| -----:|
+| 10            | Admin              |       |
+| 20            | Education          |       |
+| 30            | IT                 |       |
+| 40            | Human Resources    |       |
 
 - В таблице EMPLOYEES, EMPLOYEE_ID является первичным ключом.
 MGR_ID это идентификатор менеджеров и относится к EMPLOYEE_ID.
