@@ -111,6 +111,10 @@ SALARY NUMBER
 | 110         | Bob      | 40      |        | EX_DIR   | 8000   |
 | 120         | Ravi     | 20      | 110    | SA`*`DIR | 6500   | 
 
+* В таблице EMPLOYEES, EMPLOYEE_ID является первичным ключом.
+MGR_ID это идентификатор менеджеров и относится к EMPLOYEE_ID.
+ DEPT_ID является внешним ключом к DEPARTMENT_ID колонке таблицы DEPARTMENTS.
+
 **Таблица DEPARTMENTS**
 | DEPARTMENTS_ID| DEPARTMENTS_NAME   |       |
 | ------------- |:------------------:| -----:|
@@ -119,10 +123,7 @@ SALARY NUMBER
 | 30            | IT                 |       |
 | 40            | Human Resources    |       |
 
-* В таблице EMPLOYEES, EMPLOYEE_ID является первичным ключом.
-MGR_ID это идентификатор менеджеров и относится к EMPLOYEE_ID.
-Dept_id является внешним ключом к DEPARTMENT_ID колонке таблицы DEPARTMENTS.
-* В таблице DEPARTMENTS, department_id является первичным ключом. 
+* В таблице DEPARTMENTS, DEPARTMENTS_ID является первичным ключом. 
 Что произойдет, если выполнить команды и почему?
   
   DELETE
