@@ -66,15 +66,16 @@
 | OrderDetails |    
 | --------- |
 | OrderDetailId(PK)|     
-| OrderId (FK)  |            
+| OrderId (FK)  |  
+
 Ответ :
-- 1.Список повторяющихся строк :
+- Список повторяющихся строк :
 ~~~~sql
 SELECT * FROM OrderDetails WHERE OrderId IN (
     SELECT OrderId FROM OrderDetails GROUP BY OrderId HAVING COUNT(*) > 1 
 )
 ~~~~
-- 2.Удалить повторяющиеся строки, оставив только по одной уникальной строке (оставить только самые поздние строки) :
+- Удалить повторяющиеся строки, оставив только по одной уникальной строке (оставить только самые поздние строки) :
 ~~~~sql
 DELETE FROM OrderDetails WHERE OrderDetailId IN (
     SELECT u1.OrderDetailId FROM OrderDetails as u1
