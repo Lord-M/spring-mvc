@@ -84,9 +84,7 @@ DELETE FROM OrderDetails WHERE OrderDetailId IN (
 )
 ~~~~
 
-**3.** 
-* Получить всех сотрудников, независимо от того, имеют ли они соответствия отдела в департаменте.
-* Вывести среднюю зарплату по отделам.
+**3.** Существуют таблицы EMPLOYEES И DEPARTMENT.
 
 **Таблица EMPLOYEES**
 | LAST_NAME | DEPARTMENT   | SALARY |
@@ -104,9 +102,17 @@ DELETE FROM OrderDetails WHERE OrderDetailId IN (
 | 20            | Marketing          |
 | 30            | Accounts           |
 | 40            | Administration     |
+* Получить всех сотрудников, независимо от того, имеют ли они соответствия отдела в департаменте.
+Ответ : 1) 
+~~~~sql
+SELECT * FROM EMPLOYEES
+~~~~
+2) если нужно объединение таблиц:
+~~~~sql
+SELECT * FROM EMPLOYEES e LEFT JOIN DEPARTMENTS d on e.DEPT_ID = d.DEPARTMENT_ID
+~~~~
 
-
-
+* Вывести среднюю зарплату по отделам.
 
 **4.** Описание таблицы EMPLOYEES
 ~~~~sql
