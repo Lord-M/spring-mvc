@@ -102,17 +102,17 @@ DELETE FROM OrderDetails WHERE OrderDetailId IN (
 | 20            | Marketing          |
 | 30            | Accounts           |
 | 40            | Administration     |
-* Получить всех сотрудников, независимо от того, имеют ли они соответствия отдела в департаменте.
-Ответ : 1) 
+
+Ответ :
+- Получить всех сотрудников, независимо от того, имеют ли они соответствия отдела в департаменте.
 ~~~~sql
 SELECT * FROM EMPLOYEES
 ~~~~
-2) если нужно объединение таблиц:
+- если нужно объединение таблиц:
 ~~~~sql
 SELECT * FROM EMPLOYEES e LEFT JOIN DEPARTMENTS d on e.DEPT_ID = d.DEPARTMENT_ID
 ~~~~
-
-* Вывести среднюю зарплату по отделам.
+- Вывести среднюю зарплату по отделам.
 ~~~~sql
 SELECT DEPARTMENT_NAME, AVG(e.SALARY) as "AVERAGE_SALARY" FROM
 DEPARTMENTS d JOIN EMPLOYEES e on d.DEPARTMENT_ID = e.DEPARTMENT_ID 
